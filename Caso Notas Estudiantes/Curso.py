@@ -84,8 +84,8 @@ class Curso:
             self.__notas[i] = nuevaNota
             return self.__notas[i]
     
-    # Taller clase
-    
+    # Taller clase: Entrega 1 de mayo hasta las 11:59pm
+    #1
     def numeroIguales(self):
         contador = 0
         for i in range(len(self.__notas)):
@@ -94,6 +94,7 @@ class Curso:
                 contador += 1
         return self.__notas
     
+    #2
     def terceraNota50(self):
         contador = 0
         for i in range(len(self.__notas)):
@@ -103,6 +104,7 @@ class Curso:
                     return i
         return -1
     
+    #3
     def reemplazarHasta30(self):
         for i in range(len(self.__notas)):
             if self.__notas[i] > 3.0:
@@ -110,7 +112,8 @@ class Curso:
             else:
                 self.__notas[i] = 0.0
         return self.__notas
-    
+
+    #4
     def minNotasSuma30(self):
         suma = 0
         for i in range(len(self.__notas)):
@@ -119,8 +122,9 @@ class Curso:
                 return i + 1
         return -1
     
-    # Tarea Jueves
+    # Tarea Jueves: Entrega 1 de mayo hasta las 2pm
 
+    #1
     def cambiarNotas(self):
         for i in range(len(self.__notas)):
             if self.__notas[i] > 4.0:
@@ -128,14 +132,16 @@ class Curso:
             elif self.__notas[i] < 2.0:
                 self.__notas[i] += 0.5  # Suma 0.5 a notas menores que 2.0
         return self.__notas
-    
+
+    #2
     def darMenorNota(self):
         menor = 5.0  # Iniciamos con el valor máximo posible
         for i in range(len(self.__notas)):
             if self.__notas[i] < menor:
                 menor = self.__notas[i]  # Actualizamos la nota menor
         return menor
-    
+
+    #3
     def darRangoConMasNotas(self):
         rango1 = 0  # notas de 0.0 a 1.99
         rango2 = 0  # notas de 2.0 a 3.49
