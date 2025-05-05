@@ -163,6 +163,21 @@ class Curso:
         else:
             return 3
         
-    # Taller Fin de semana
-# no empiezo asjajkas
+    # Taller Fin de semana: Entrega 4 de mayo hasta la 11:59pm
+
+    def notaMediana(self):
+        notasOrdenadas = []
+        for i in range(len(self.__notas)):
+            notasOrdenadas.append(self.__notas[i])
+        
+        for i in range(len(notasOrdenadas)):
+            for j in range(i + 1, len(notasOrdenadas)):
+                if notasOrdenadas[i] > notasOrdenadas[j]:
+                    temp = notasOrdenadas[i]
+                    notasOrdenadas[i] = notasOrdenadas[j]
+                    notasOrdenadas[j] = temp
+        
+        posMediana = len(notasOrdenadas) // 2
+    
+        return notasOrdenadas[posMediana]
     
